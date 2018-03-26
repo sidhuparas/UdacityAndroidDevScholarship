@@ -135,11 +135,19 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     }
 
     @Override
-    public Loader<String> onCreateLoader(int i, Bundle bundle) {
+    public Loader<String> onCreateLoader(int i, final Bundle bundle) {
         return new AsyncTaskLoader<String>(this) {
             @Override
             public String loadInBackground() {
-                return null;
+                String searchQueryUrlString
+            }
+
+            @Override
+            protected void onStartLoading() {
+                if (bundle==null)
+                    return;
+                mLoadingIndicator.setVisibility(View.VISIBLE);
+                forceLoad();
             }
         };
     }
@@ -153,16 +161,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void onLoaderReset(Loader<String> loader) {
 
     }
-
-    // TODO (5) Override onStartLoading
-                // Within onStartLoading
-
-                // TODO (6) If args is null, return.
-
-                // TODO (7) Show the loading indicator
-
-                // TODO (8) Force a load
-                // END - onStartLoading
 
             // TODO (9) Override loadInBackground
 

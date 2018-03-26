@@ -25,4 +25,11 @@
 
     <!-- TODO (1) Add a list preference -->
 
+    <ListPreference
+        android:defaultValue="Red"
+        android:entries="@array/labels"
+        android:entryValues="@array/values"
+        android:key="color"
+        android:title="Shape Color" />
+
 </PreferenceScreen>

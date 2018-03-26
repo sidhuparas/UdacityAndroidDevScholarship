@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="labels">
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+    </array>
+    
+    <array name="values">
+        <item>red</item>
+        <item>blue</item>
+        <item>green</item>
+    </array>
+</resources>
