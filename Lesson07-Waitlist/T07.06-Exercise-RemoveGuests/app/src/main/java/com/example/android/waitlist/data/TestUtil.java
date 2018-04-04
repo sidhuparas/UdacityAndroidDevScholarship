@@ -3,9 +3,12 @@ package com.example.android.waitlist.data;
 import android.content.ContentValues;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.content.ContentValues.TAG;
 
 public class TestUtil {
 
@@ -54,7 +57,7 @@ public class TestUtil {
             db.setTransactionSuccessful();
         }
         catch (SQLException e) {
-            //too bad :(
+            Log.e(TAG, "insertFakeData: " + e.getMessage() );
         }
         finally
         {
