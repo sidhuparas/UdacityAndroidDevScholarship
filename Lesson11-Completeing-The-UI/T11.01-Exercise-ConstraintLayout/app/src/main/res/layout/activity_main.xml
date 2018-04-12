@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- TODO (17) Surround the Constraint layout with a ScrollView -->
 <!-- TODO (2) Replace the Relative layout with a ConstraintLayout -->
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <!-- TODO (3) Create a TextView for the Passenger label and name -->
     <!-- TODO (4) Use tool:text to set the text value -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        tools:text="PASSENGER"
+        style="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="60dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/shape_rectangle_stroke" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        tools:text="@string/passenger_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        style="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/colorPrimary"/>
 
     <!-- TODO (5) Create an ImageView for the left rectangle -->
     <!-- TODO (6) Set the background to the shape_rectangle_stroke drawable -->
@@ -32,5 +68,5 @@
 
     <!-- TODO (14) Create an ImageView for the barcode -->
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
 
